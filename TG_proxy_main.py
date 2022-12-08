@@ -245,8 +245,8 @@ def write_document():
 #获取clash订阅
 def get_yaml():
     print("开始获取clsah订阅")
-    urls = ["https://suo.yt/AmwsC4c",
-            "https://v1.mk/y5kPoHm", "https://v1.mk/6mm8aPR"]
+    urls = ["https://suo.yt/tapzBLr",
+            "https://v1.mk/Ui5e5OI", "https://v1.mk/6wls31C"]
     n = 1
     for i in urls:
         response = requests.get(i)
