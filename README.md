@@ -55,8 +55,8 @@ ps：增至8个订阅链接，每个大约150个左右（不确定）避免太�
 `https://raw.githubusercontent.com/cdcyry/TG/main/Long_term_subscription8`
 `合并节点总数: 115`
 
-- [clash订阅](https://raw.githubusercontent.com/cdcyry/TG/main/Long_term_subscription1.yaml)
-`https://raw.githubusercontent.com/cdcyry/TG/main/Long_term_subscription1.yaml`
+- [clash订阅]([https://raw.githubusercontent.com/cdcyry/TG/main/Long_term_subscription1.yaml](https://jsd.cdn.zzko.cn/gh/cdcyry/TG@main/Long_term_subscription1.yaml))
+`[https://raw.githubusercontent.com/cdcyry/TG/main/Long_term_subscription1.yaml](https://jsd.cdn.zzko.cn/gh/cdcyry/TG@main/Long_term_subscription1.yaml)`
 
 
 - [clash订阅](https://raw.githubusercontent.com/cdcyry/TG/main/Long_term_subscription2.yaml)
