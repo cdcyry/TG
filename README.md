@@ -227,4 +227,5 @@ ps：增至8个订阅链接，每个大约150个左右（不确定）避免太�
 </details>
 
 ## ✨星标统计
-`[![Star History Chart](https://api.star-history.com/svg?repos=cdcyry/TG&type=Date)](https://star-history.com/#cdcyry/TG&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=bytebase/star-history&type=Date)](https://star-history.com/#bytebase/star-history&Date)
+
