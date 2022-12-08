@@ -203,9 +203,9 @@ def write_document():
                 if lines[index] == '`https://raw.githubusercontent.com/cdcyry/TG/main/Long_term_subscription8`\n': # 目标行内容
                     lines.pop(index+1)
                     lines.insert(index+1, f'`合并节点总数: {length-step*7}`\n')
-                if lines[index] == '### 试用高速订阅数量: `12`\n': # 目标行内容
-                    lines.pop(index+1)
-                    lines.insert(index+1, f'更新时间：`{TimeDate}`\n')
+                if lines[index] == '`https://raw.githubusercontent.com/cdcyry/TG/main/Long_term_subscription3.yaml`': # 目标行内容
+                    lines.pop(index+5)
+                    lines.insert(index+5, f'更新时间：`{TimeDate}`\n')
                 if lines[index] == '>试用订阅：\n': # 目标行内容
                     lines.pop(index)
                     lines.pop(index)
@@ -266,10 +266,15 @@ def get_sub_url():
         #'https://console.ly520.me',
         #'https://www.yifei999.com',
         #'https://www.funkyun.xyz'
+        'https://console.ly520.me',
+        'https://www.dgycom.com',
+        #'http://tg.cyy200.xyz'
+        'https://meal.leftright.buzz',
+        'https://www.bfyun.top',
         'https://user.bafang.vip',
         'https://cloud.hhygj.xyz',
     )
-    times = 6
+    times = 2
     for current_url in home_urls:
         i = 0
         while i < times:
