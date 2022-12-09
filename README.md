@@ -1,4 +1,4 @@
-# 🍀Auto_proxy
+# 🍀TG_Free Proxy
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/cdcyry/TG/sub_merge?label=sub_merge)](https://github.com/cdcyry/TG/actions/workflows/main.yml) 
 ![Watchers](https://img.shields.io/github/watchers/cdcyry/TG) ![Stars](https://img.shields.io/github/stars/cdcyry/TG) ![Forks](https://img.shields.io/github/forks/cdcyry/TG) ![Vistors](https://visitor-badge.laobi.icu/badge?page_id=cdcyry.TG) ![LICENSE](https://img.shields.io/badge/license-CC%20BY--SA%204.0-green.svg)
 
