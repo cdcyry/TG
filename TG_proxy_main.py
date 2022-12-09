@@ -262,16 +262,17 @@ def get_sub_url():
     V2B_REG_REL_URL = '/api/v1/passport/auth/register'
     # V2B_SUB_REL_URL = '/api/v1/user/getSubscribe'
     home_urls = (
-        'https://www.yifei999.com',
-        'https://www.funkyun.xyz'
-        'https://console.ly520.me',
-        'https://mitu.lol',
-        'https://meal.leftright.buzz',
-        'https://www.bfyun.top',
+        #'https://www.yifei999.com',
+        #'https://www.funkyun.xyz'
+        #'https://console.ly520.me',
+        #'https://mitu.lol',
+        
+        #'https://www.bfyun.top',
         'https://user.bafang.vip',
         'https://cloud.hhygj.xyz',
+        'https://meal.leftright.buzz',
     )
-    times = 1
+    times = 2
     for current_url in home_urls:
         i = 0
         while i < times:
@@ -286,18 +287,47 @@ def get_sub_url():
                 'invite_code': '',
                 'email_code': ''
             }
+            #try:
+                #print(current_url)
+            response = requests.post(current_url+V2B_REG_REL_URL, data=form_data,headers=header)
+            if current_url == 'https://meal.leftright.buzz':
+                #print(current_url)
+                fan_res = requests.post('https://meal.leftright.buzz/api/v1/passport/auth/login', data=form_data,headers=header)
+                #print(fan_res.text)
+                auth_data = fan_res.json()["data"]["auth_data"]
+                #print(auth_data)
+                fan_header = {
+                    'Host': 'meal.leftright.buzz',
+                    'Origin': 'https://meal.leftright.buzz',
+                    'Authorization': ''.join(auth_data),
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Connection': 'keep-alive',
+                    'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Mobile/15E148 Safari/604.1',
+                    'Referer': 'https://meal.leftright.buzz/',
+                }
+                fan_data = {
+                    'period': 'quarter_price',
+                    'plan_id': '1',
+                }
+                fan_res_n = requests.post('https://meal.leftright.buzz/api/v1/user/order/save', headers=fan_header, data=fan_data)
+                print(fan_res_n.json()["data"])
+                fan_data_n = {
+                    'trade_no':fan_res_n.json()["data"],
+                    'method': '1',
+                }
+                fan_res_pay = requests.post('https://meal.leftright.buzz/api/v1/user/order/checkout', data=fan_data_n,headers=fan_header)
+                print("获取饭小溪订阅成功。。。")
+                
+            #except Exception as result:
+                #print(result)    
             try:
-                response = requests.post(current_url+V2B_REG_REL_URL, data=form_data,headers=header)
-                try:
-                    subscription_url = f'{current_url}/api/v1/client/subscribe?token={response.json()["data"]["token"]}'
-                    e_sub.append(subscription_url)
-                    try_sub.append(subscription_url)
-                    #print(subscription_url)
-                    print("add:"+subscription_url)
-                except:
-                    print("获取订阅失败")
+                subscription_url = f'{current_url}/api/v1/client/subscribe?token={response.json()["data"]["token"]}'
+                e_sub.append(subscription_url)
+                try_sub.append(subscription_url)
+                #print(subscription_url)
+                print("add:"+subscription_url)
             except:
-                print("获取token失败")
+                print("获取订阅失败")
             i += 1
             #print(f'Number succeeded: {i}\t{subscription_url}')
                 
